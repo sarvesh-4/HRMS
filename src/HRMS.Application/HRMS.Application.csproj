@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>HRMS.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <!-- Gives access to UserManager<T>/RoleManager<T> without pulling in EF Core stores -->
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HRMS.Domain\HRMS.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

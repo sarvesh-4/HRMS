@@ -1,0 +1,21 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+
+## IDE
+.vs/
+.vscode/
+*.swp
+
+## EF Core
+**/Migrations/*.Designer.cs.bak
+
+## Secrets / local config overrides
+appsettings.Local.json
+*.env
+
+## OS
+.DS_Store
+Thumbs.db

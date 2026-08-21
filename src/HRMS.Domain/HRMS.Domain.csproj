@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>HRMS.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Needed only for IdentityUser<Guid> base class used by ApplicationUser -->
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.8" />
+  </ItemGroup>
+
+</Project>

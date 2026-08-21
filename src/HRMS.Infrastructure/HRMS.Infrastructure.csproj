@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>HRMS.Infrastructure</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+  <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <!-- EF Core + PostgreSQL provider (used for writes / migrations / Identity) -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.10" />
+
+    <!-- ASP.NET Core Identity with EF Core stores -->
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
+
+    <!-- Dapper (used for fast read-only queries, demonstrating micro-ORM alongside EF Core) -->
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Npgsql" Version="8.0.5" />
+
+    <!-- JWT token generation -->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HRMS.Domain\HRMS.Domain.csproj" />
+    <ProjectReference Include="..\HRMS.Application\HRMS.Application.csproj" />
+  </ItemGroup>
+
+</Project>
